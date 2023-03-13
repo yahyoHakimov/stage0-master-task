@@ -8,13 +8,12 @@ public class Bird extends  Animal{
         this.numberOfWings = numberOfWings;
     }
 
-//    @Override
-//    protected String getDescription() {
-//        String animalDescription = super.getDescription();
-//
-//        return " Moreover, it has " + numberOfWings + " wings and can fly.";
-//
-//    }
+    @Override
+    public String getDescription(String color, int numberOfPaws, boolean hasFur) {
+        return numberOfPaws == 1 ?
+                "This animal is mostly " + color + ".It has " + numberOfPaws + " paw and " + (hasFur ? "a " : " no" + " fur.") :
+                "This animal is mostly " + color + ".It has " + numberOfPaws + " paws and " + (hasFur ? "a " : " no" + " fur. Moreover, it has 2 wings and can fly.");
+    }
 
 
 }
